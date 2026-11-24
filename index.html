@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="拼读泡泡是一款电视英语绘本阅读 App。看看孩子怎么读，家长怎么安装和导入绘本。">
+  <meta name="theme-color" content="#ffdc42">
+  <title>拼读泡泡 PhoniPop｜电视上的英语绘本</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="mast">
+    <div class="shell mast-inner">
+      <a class="brand" href="#top" aria-label="拼读泡泡 PhoniPop 首页"><img src="assets/phonipop.png" width="600" height="78" alt=""></a>
+      <nav aria-label="主导航">
+        <a href="#read">看界面</a>
+        <a href="#install">安装</a>
+        <a href="#make">制书</a>
+        <a href="#books">导书</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="headline">
+      <div class="shell hero-grid">
+        <div class="lead-copy">
+          <h1 id="headline"><span>把经典英语</span><span>绘本搬上电视</span></h1>
+          <p>按遥控器选书、翻页，听一句，再读一句。</p>
+          <div class="actions">
+            <a class="button primary" href="#install">看安装教程</a>
+            <a class="button quiet" href="#read">看看怎么读</a>
+          </div>
+        </div>
+        <figure class="hero-shot" data-slot="bookshelf" data-kind="product">
+          <div class="screen"><img src="assets/shelf.webp" width="1440" height="810" alt="拼读泡泡电视书架：黄色背景、蓝色遥控器焦点和绘本封面" fetchpriority="high"></div>
+          <figcaption>按级别或书名首字母选书。图中书架含另外导入的绘本。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="read" class="reading band" aria-labelledby="read-heading">
+      <div class="shell split">
+        <div class="feature-copy">
+          <h2 id="read-heading">翻一页，<br>听一句</h2>
+          <p>阅读时，插图和句子一起出现在大屏上。读到一半退出，下次打开继续读。</p>
+          <dl class="key-guide">
+            <div><dt><kbd>左</kbd> <kbd>右</kbd></dt><dd>翻到上一页或下一页</dd></div>
+            <div><dt><kbd>确认</kbd></dt><dd>播放或暂停当页朗读</dd></div>
+            <div><dt><kbd>返回</kbd></dt><dd>回到书架</dd></div>
+          </dl>
+        </div>
+        <figure class="reading-shot" data-slot="reading" data-kind="product">
+          <img src="assets/reader.webp" width="1280" height="720" alt="电视阅读页左侧是小鸡插图，右侧显示对应的英文句子" loading="lazy">
+          <figcaption>有音频的绘本可以逐页听读。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="install" class="install band" aria-labelledby="install-heading">
+      <div class="shell guide">
+        <div class="guide-intro">
+          <h2 id="install-heading">装到电视上</h2>
+          <p>准备一台 Android 电视或盒子。电脑端 AI 助手可以帮你安装，也可以自己用 U 盘安装。</p>
+          <dl class="hardware">
+            <div><dt>系统要求</dt><dd>Android 6.0 或以上</dd></div>
+            <div><dt>已试装机型</dt><dd>小米电视 MiTV-AETP0，Android 9</dd></div>
+          </dl>
+          <p><a class="button primary" href="download/PhoniPop-2.0.0.apk" download>下载 PhoniPop 2.0.0 APK</a></p><p>内置六本原创有声小书。B、C 两级各三本，试试用 B、C 或 S 筛选书名。</p><figure class="tutorial-shot"><a href="assets/launcher.webp" aria-label="查看大图：电视桌面上选中的 PhoniPop 图标"><img src="assets/launcher.webp" alt="电视桌面上选中的 PhoniPop 图标" loading="lazy"></a><figcaption>安装完成后，从电视应用列表打开拼读泡泡。</figcaption></figure>
+        </div>
+        <div class="install-choices">
+          <details class="route" name="install-method">
+            <summary>用 U 盘安装</summary>
+            <ol>
+              <li>把官方提供的 <strong>APK 安装包</strong>复制到 U 盘，再插到电视上。</li>
+              <li>用电视的文件管理器找到 APK，打开并按屏幕提示安装。</li>
+              <li>回到电视的应用列表，打开 <strong>PhoniPop</strong>。</li>
+            </ol>
+            <p>如果电视拦截安装，在系统提示里查看该文件管理器的安装权限。不同机型的设置入口可能不同。</p>
+          </details>
+          <details class="route" name="install-method" open>
+            <summary>交给电脑端 AI 助手</summary>
+            <ol>
+              <li>让电脑和电视连接同一局域网。按电视系统提示开启 ADB 调试，记下电视 IP。</li>
+              <li>把下面的提示词发给能在电脑上运行命令的助手。助手会从官网下载并校验安装包。</li>
+              <li>电视弹出允许调试或安装确认时，用遥控器确认。</li>
+            </ol>
+            <div class="prompt">
+              <p>选择能在这台电脑上运行命令的助手，例如</p><ul class="agents"><li><img src="assets/agents/workbuddy.svg" alt="" width="20" height="20">WorkBuddy</li><li><img src="assets/agents/doubao.svg" alt="" width="20" height="20">豆包电脑版</li><li><img src="assets/agents/qwen.svg" alt="" width="20" height="20">千问电脑版</li><li><img src="assets/agents/trae.svg" alt="" width="20" height="20">Trae</li><li><img src="assets/agents/claude-code.svg" alt="" width="20" height="20">Claude Code</li><li><img src="assets/agents/codex.svg" alt="" width="20" height="20">Codex</li></ul><label for="agent-prompt">安装提示词</label>
+              <textarea id="agent-prompt" rows="6" readonly spellcheck="false">请按我附上的 agent.md 在这台电脑上读取官方版本清单，下载并校验 APK，给我指定的电视安装或覆盖升级拼读泡泡，保留书库和进度。请向我要电视地址，在需要遥控器确认时提醒我，最后打开 App 并报告实际版本和启动结果。</textarea>
+              <div class="copy-row">
+                <button type="button" class="button quiet" data-copy hidden>复制提示词</button>
+                <a href="agent.md">查看 Agent 安装指南</a>
+                <span id="copy-status" role="status"></span>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="make" class="band" aria-labelledby="make-heading">
+      <div class="shell guide">
+        <div class="guide-intro">
+          <h2 id="make-heading">做一本自己的绘本</h2>
+          <p>把自己制作或获准使用的英文绘本交给电脑上的 AI 助手。先从一本开始，做好的 ZIP 就能带到电视上读。</p>
+          <p><a href="assets/reading-content-pack.zip" download>下载制书工具包（Skill）</a></p><figure class="tutorial-shot"><a href="assets/agent-books.webp" aria-label="查看大图：桌面助手读取四份 PDF 并核对页面顺序"><img src="assets/agent-books.webp" alt="桌面助手读取四份 PDF 并核对页面顺序" loading="lazy"></a><figcaption>制书对话示例：附上绘本后，助手先核对页序和版式。点图可放大。</figcaption></figure>
+        </div>
+        <div class="route">
+          <ol>
+            <li><strong>准备素材。</strong>把一本绘本的 PDF 或 PPTX 放进单独的文件夹。有配套录音也一起放进去，按页码命名。</li>
+            <li><strong>把文件夹和下面这段话交给桌面 AI 助手。</strong>助手需要能读取本机文件、运行 Python。如果已下载制书工具包，可以直接作为附件交给它。</li>
+            <li><strong>看一遍成书。</strong>按助手给出的页码核对插图、句子和朗读。把交付的绘本 ZIP 带到电视，按下一节<a href="#books">导书教程</a>操作。</li>
+          </ol>
+          <div class="prompt">
+            <label for="make-prompt">制书提示词</label>
+            <textarea id="make-prompt" rows="5" readonly spellcheck="false">请解压我附上的制书工具包，按其中的 SKILL.md，把我提供的这本 PDF 或 PPTX 做成拼读泡泡绘本，保留原文、页序和配套录音。请在本机完成校验和打包，告诉我可导入电视的 ZIP 在哪里，并列出需要我核对的页码和合成朗读页。</textarea>
+            <div class="copy-row"><button type="button" class="button quiet" data-copy hidden>复制制书提示词</button><span role="status"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="books" class="books band" aria-labelledby="books-heading">
+      <div class="shell">
+        <div class="book-head">
+          <h2 id="books-heading">把绘本加进书架</h2>
+          <p>准备一个拼读泡泡内容包。<strong>保留 ZIP 原样</strong>，直接在电视上选中它。</p>
+        </div>
+        <div class="book-grid">
+          <div class="import-steps">
+            <ol>
+              <li><strong>把 ZIP 放到电视能读取的位置。</strong><span>拷到 U 盘，或放进电视的本地存储。</span></li>
+              <li><strong>从书架打开「导入图书」。</strong><span>旧版显示「添加图书」。选「U 盘 / 本地文件」或「系统文件选择」，按提示授予所需权限。</span></li>
+              <li><strong>选中 ZIP，确认添加。</strong><span>查看书名清单，确认后返回书架打开绘本。导入完成就可以拔掉 U 盘。</span></li>
+            </ol><figure class="tutorial-shot"><a href="assets/import.webp" aria-label="查看大图：电视的导入清单显示本次所选书目"><img src="assets/import.webp" alt="电视的导入清单显示本次所选书目" loading="lazy"></a><figcaption>选中 ZIP 后，核对导入清单里的书名。</figcaption></figure>
+          </div>
+          <figure class="sample">
+            <img src="assets/sample-cover.png" width="640" height="360" alt="Count the Dots 的示例页，浅黄底上有一个橙红色圆点" loading="lazy">
+            <figcaption>
+              <strong lang="en">Count the Dots</strong>
+              <span>三页原创图文，用来试走导书流程。</span>
+              <a class="button quiet" href="assets/phonipop-sample.zip" download>下载示例 ZIP</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq band" aria-labelledby="faq-heading">
+      <div class="shell guide">
+        <h2 id="faq-heading">装好以后</h2>
+        <div class="faq-items">
+          <details><summary>导入后还需要联网吗？</summary><p>导入成功后，绘本保存在电视上，阅读和播放包内音频都可以离线进行。</p></details>
+          <details><summary>为什么这本书没有声音？</summary><p>朗读来自内容包。有些包只有图片和文字，仍然可以翻页阅读。上面的示例 ZIP 就是图文包。</p></details>
+          <details><summary>更新 App 时，已导入的书怎么办？</summary><p>使用同一发布渠道的新版 APK 覆盖安装。先保留旧版 App 和原始 ZIP，避免卸载导致书库和进度被系统移除。</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">
+    <div class="shell foot-inner">
+      <a class="brand" href="#top" aria-label="拼读泡泡 PhoniPop 首页"><img src="assets/phonipop-yellow.png" width="600" height="78" alt=""></a>
+      <p>PhoniPop 2.0</p>
+      <a href="#top">回到顶部</a>
+    </div>
+  </footer>
+</body>
+</html>

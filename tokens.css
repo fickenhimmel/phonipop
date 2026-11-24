@@ -1,0 +1,42 @@
+/* Hallmark · PhoniPop Logo 套装 V3 and TV app typography · v2.0.0 */
+@font-face {
+  font-family: Nunito;
+  src: url("assets/Nunito-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+:root {
+  --color-ink: #17284f;
+  --color-muted: #4d5974;
+  --color-blue: #3146c8;
+  --color-blue-dark: #24349b;
+  --color-yellow: #ffdc42;
+  --color-yellow-wash: #ffec99;
+  --color-coral: #f05243;
+  --color-paper: #ffffff;
+  --color-guide: #fffae5;
+  --color-hover: #fff1ba;
+  --color-line: #d2d9ef;
+  --color-yellow-line: #d8b126;
+  --color-frame: #242e68;
+  --color-shadow: #3046c825;
+  --color-focus: #233394;
+  --font-display: Nunito, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-body: var(--font-display);
+  --space-2xs: .25rem;
+  --space-xs: .5rem;
+  --space-sm: .75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  --radius-pill: 999px;
+  --radius-panel: 1.25rem;
+  --radius-screen: 1.1rem;
+  --width: 76rem;
+  --gutter: clamp(1rem, 4vw, 3.5rem);
+  --gap-columns: clamp(2rem, 5vw, 5rem);
+  --mast-height: 5rem;
+}
