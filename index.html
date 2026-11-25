@@ -89,13 +89,39 @@
             </ol>
             <div class="prompt">
               <p>选择能在这台电脑上运行命令的助手，例如</p><ul class="agents"><li><img src="assets/agents/workbuddy.svg" alt="" width="20" height="20">WorkBuddy</li><li><img src="assets/agents/doubao.svg" alt="" width="20" height="20">豆包电脑版</li><li><img src="assets/agents/qwen.svg" alt="" width="20" height="20">千问电脑版</li><li><img src="assets/agents/trae.svg" alt="" width="20" height="20">Trae</li><li><img src="assets/agents/claude-code.svg" alt="" width="20" height="20">Claude Code</li><li><img src="assets/agents/codex.svg" alt="" width="20" height="20">Codex</li></ul><label for="agent-prompt">安装提示词</label>
-              <textarea id="agent-prompt" rows="6" readonly spellcheck="false">请按我附上的 agent.md 在这台电脑上读取官方版本清单，下载并校验 APK，给我指定的电视安装或覆盖升级拼读泡泡，保留书库和进度。请向我要电视地址，在需要遥控器确认时提醒我，最后打开 App 并报告实际版本和启动结果。</textarea>
+              <textarea id="agent-prompt" rows="12" readonly spellcheck="false">请帮我把拼读泡泡（PhoniPop）装到我的 Android 电视上，并打开书架。如果已经装过，请覆盖升级，保留已导入的绘本和阅读进度。
+电视 IP：&lt;电视 IP&gt;
+
+安装说明：https://phonipop.space/agent.md
+（打不开时用 https://raw.githubusercontent.com/fickenhimmel/phonipop/main/agent.md ）
+
+请先完整读完安装说明，再在我的电脑上亲自运行命令，下载并校验官方 APK。需要我在电视上查看配对码、允许调试或确认安装时，请告诉我按哪个键。
+
+最后按说明里的「验收」，把下面四条命令和原始输出贴给我。请把 &lt;设备&gt; 换成这台电视在 adb devices 中的序列号，把 &lt;启动组件&gt; 换成第三条查到的组件。
+
+1. 查看安装路径
+adb -s &lt;设备&gt; shell pm path com.phonipop.tv
+
+2. 查看已安装的版本
+adb -s &lt;设备&gt; shell "dumpsys package com.phonipop.tv | grep -e versionName= -e versionCode="
+
+3. 查找电视应用列表里的拼读泡泡入口
+adb -s &lt;设备&gt; shell cmd package resolve-activity --brief -a android.intent.action.MAIN -c android.intent.category.LEANBACK_LAUNCHER -p com.phonipop.tv
+
+4. 打开拼读泡泡并查看启动结果
+adb -s &lt;设备&gt; shell am start -W -a android.intent.action.MAIN -c android.intent.category.LEANBACK_LAUNCHER -n &lt;启动组件&gt;
+
+如果安装或启动失败，请告诉我卡在哪一步，并贴出报错原文。</textarea>
               <div class="copy-row">
                 <button type="button" class="button quiet" data-copy hidden>复制提示词</button>
                 <a href="agent.md">查看 Agent 安装指南</a>
                 <span id="copy-status" role="status"></span>
               </div>
             </div>
+            <aside class="install-tip" aria-label="安装提醒">
+              <p><strong>请在电脑上操作。</strong>手机上的豆包和普通网页版聊天可以讲解步骤。要让助手亲自安装，请在家里的电脑上打开上面列出的桌面工具，豆包工作版也可以，并允许它在本机运行命令。</p>
+              <p>电视弹出调试授权时，确认是自己的电脑，勾选「始终允许使用这台计算机进行调试」，再按「允许」。如果电视只有「允许」按钮，直接选它。</p>
+            </aside>
           </details>
         </div>
       </div>
@@ -115,6 +141,7 @@
             <li><strong>看一遍成书。</strong>按助手给出的页码核对插图、句子和朗读。把交付的绘本 ZIP 带到电视，按下一节<a href="#books">导书教程</a>操作。</li>
           </ol>
           <div class="prompt">
+            <p>选择能在这台电脑上运行命令的助手，例如</p><ul class="agents"><li><img src="assets/agents/workbuddy.svg" alt="" width="20" height="20">WorkBuddy</li><li><img src="assets/agents/doubao.svg" alt="" width="20" height="20">豆包电脑版</li><li><img src="assets/agents/qwen.svg" alt="" width="20" height="20">千问电脑版</li><li><img src="assets/agents/trae.svg" alt="" width="20" height="20">Trae</li><li><img src="assets/agents/claude-code.svg" alt="" width="20" height="20">Claude Code</li><li><img src="assets/agents/codex.svg" alt="" width="20" height="20">Codex</li></ul>
             <label for="make-prompt">制书提示词</label>
             <textarea id="make-prompt" rows="5" readonly spellcheck="false">请解压我附上的制书工具包，按其中的 SKILL.md，把我提供的这本 PDF 或 PPTX 做成拼读泡泡绘本，保留原文、页序和配套录音。请在本机完成校验和打包，告诉我可导入电视的 ZIP 在哪里，并列出需要我核对的页码和合成朗读页。</textarea>
             <div class="copy-row"><button type="button" class="button quiet" data-copy hidden>复制制书提示词</button><span role="status"></span></div>
@@ -127,22 +154,22 @@
       <div class="shell">
         <div class="book-head">
           <h2 id="books-heading">把绘本加进书架</h2>
-          <p>准备一个拼读泡泡内容包。<strong>保留 ZIP 原样</strong>，直接在电视上选中它。</p>
+          <p>第一次导书，可以先下载本节的示例绘本。<strong>保留下载好的 ZIP 文件，直接把它交给拼读泡泡打开。</strong></p>
         </div>
         <div class="book-grid">
           <div class="import-steps">
             <ol>
-              <li><strong>把 ZIP 放到电视能读取的位置。</strong><span>拷到 U 盘，或放进电视的本地存储。</span></li>
-              <li><strong>从书架打开「导入图书」。</strong><span>旧版显示「添加图书」。选「U 盘 / 本地文件」或「系统文件选择」，按提示授予所需权限。</span></li>
-              <li><strong>选中 ZIP，确认添加。</strong><span>查看书名清单，确认后返回书架打开绘本。导入完成就可以拔掉 U 盘。</span></li>
+              <li><strong>把绘本送到电视上。</strong><span>用 U 盘时，把下载好的绘本 ZIP 拷贝到 U 盘，再把 U 盘插到电视上。也可以把 ZIP 发给已连接电视的电脑端 AI 助手，对它说：「请把这个绘本 ZIP 传到我电视的 Download 文件夹，传好后告诉我文件名。」</span></li>
+              <li><strong>在书架上选「导入图书」。</strong><span>用遥控器选「U 盘 / 本地文件」。用 U 盘的家庭打开 U 盘；让助手传书的家庭打开电视本地存储，再进 Download 文件夹。首次访问时按电视提示允许读取文件，也可以返回选择「系统文件选择」。</span></li>
+              <li><strong>选中绘本 ZIP，再选「添加」。</strong><span>电视会列出将要新增或更新的书。核对书名后选「添加」，回到书架就能打开。若每本都显示「跳过」，说明已有相同或更新的版本，选「完成」即可。导入完成后可以拔掉 U 盘。</span></li>
             </ol><figure class="tutorial-shot"><a href="assets/import.webp" aria-label="查看大图：电视的导入清单显示本次所选书目"><img src="assets/import.webp" alt="电视的导入清单显示本次所选书目" loading="lazy"></a><figcaption>选中 ZIP 后，核对导入清单里的书名。</figcaption></figure>
           </div>
           <figure class="sample">
-            <img src="assets/sample-cover.png" width="640" height="360" alt="Count the Dots 的示例页，浅黄底上有一个橙红色圆点" loading="lazy">
+            <img src="assets/sample-cover.png" width="640" height="360" alt="三只小猪示例绘本的封面" loading="lazy">
             <figcaption>
-              <strong lang="en">Count the Dots</strong>
-              <span>三页原创图文，用来试走导书流程。</span>
-              <a class="button quiet" href="assets/phonipop-sample.zip" download>下载示例 ZIP</a>
+              <strong lang="en">The three little pig</strong>
+              <span>九页原创图文，可以用来尝试走导书流程</span>
+              <a class="button quiet" href="assets/phonipop-sample.zip" download>下载示例绘本 ZIP</a>
             </figcaption>
           </figure>
         </div>
@@ -154,7 +181,7 @@
         <h2 id="faq-heading">装好以后</h2>
         <div class="faq-items">
           <details><summary>导入后还需要联网吗？</summary><p>导入成功后，绘本保存在电视上，阅读和播放包内音频都可以离线进行。</p></details>
-          <details><summary>为什么这本书没有声音？</summary><p>朗读来自内容包。有些包只有图片和文字，仍然可以翻页阅读。上面的示例 ZIP 就是图文包。</p></details>
+          <details><summary>为什么这本书没有声音？</summary><p>朗读来自内容包。有些包只有图片和文字，仍然可以翻页阅读。本页的三只小猪示例配有逐页朗读，打开后可按遥控器确认键试听。</p></details>
           <details><summary>更新 App 时，已导入的书怎么办？</summary><p>使用同一发布渠道的新版 APK 覆盖安装。先保留旧版 App 和原始 ZIP，避免卸载导致书库和进度被系统移除。</p></details>
         </div>
       </div>
