@@ -1,3 +1,25 @@
+const tvIP = document.querySelector('#tv-ip');
+const installPrompt = document.querySelector('#agent-prompt');
+const ipStatus = document.querySelector('#tv-ip-status');
+const installCopyStatus = document.querySelector('#copy-status');
+
+function updateInstallPrompt() {
+  const ip = tvIP.value.trim();
+  const valid = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/.test(ip)
+    && ip.split('.').every(part => Number(part) <= 255);
+  installPrompt.value = installPrompt.defaultValue.replace('<电视 IP>', valid ? ip : '<电视 IP>');
+  tvIP.setAttribute('aria-invalid', String(ip !== '' && !valid));
+  ipStatus.textContent = valid ? '已填入下方安装提示词。'
+    : ip ? '请输入电视上显示的 IP，例如 192.168.1.20。' : '';
+  installCopyStatus.textContent = '';
+}
+
+document.querySelector('#usb-install-shortcut').addEventListener('click', () => {
+  document.querySelector('#install-usb').checked = true;
+});
+tvIP.addEventListener('input', updateInstallPrompt);
+window.addEventListener('pageshow', updateInstallPrompt);
+
 const makePrompt = document.querySelector('#make-prompt');
 
 if (location.protocol === 'https:') {

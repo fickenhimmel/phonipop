@@ -71,19 +71,51 @@
           <p><a class="button primary" href="download/PhoniPop-2.0.0.apk" download>下载 PhoniPop 2.0.0 APK</a></p><p>内置六本原创有声小书。B、C 两级各三本，试试用 B、C 或 S 筛选书名。</p><figure class="tutorial-shot"><a href="assets/launcher.webp" aria-label="查看大图：电视桌面上选中的 PhoniPop 图标"><img src="assets/launcher.webp" alt="电视桌面上选中的 PhoniPop 图标" loading="lazy"></a><figcaption>安装完成后，从电视应用列表打开拼读泡泡。</figcaption></figure>
         </div>
         <div class="install-choices">
-          <details class="route" name="install-method">
-            <summary>用 U 盘安装</summary>
+          <p class="install-shortcut">用 U 盘安装的家庭可以直接<a href="#install-methods" id="usb-install-shortcut">跳到第 3 步</a>。</p>
+          <section class="route install-step" aria-labelledby="adb-heading">
+            <h3 id="adb-heading">1. 在电视上打开 ADB 调试</h3>
+            <p>让电脑和电视连到同一个家庭网络。用遥控器打开电视设置，按品牌找调试入口。</p>
+            <div class="adb-brands">
+              <details name="adb-brand" open>
+                <summary>小米电视</summary>
+                <p>进入「设置 → 关于」，选中「产品型号」并连续按确认键，直到电视提示进入开发者模式。返回设置，在「账号与安全」里打开「ADB 调试」。</p>
+              </details>
+              <details name="adb-brand">
+                <summary>TCL</summary>
+                <p>进入「设置 → 关于 → 本机信息」，快速按遥控器的上、下、左、右键。底部出现「更多」后，打开其中的「ADB」。</p>
+              </details>
+              <details name="adb-brand">
+                <summary>海尔</summary>
+                <p>按电视机身的信号源键，出现菜单后，用遥控器依次按左、左、上、右。进入海尔工厂菜单后，将「ADB 调试开关」设为开，然后退出菜单。</p>
+              </details>
+              <details name="adb-brand">
+                <summary>OPPO</summary>
+                <p>进入「设置 → 系统 → 关于本机」，选中「设备型号」，依次按上、上、右、右，再按确认。然后进入「系统 → 开发者选项」，打开「USB 调试」或「ADB 调试」。</p>
+              </details>
+              <details name="adb-brand">
+                <summary>其他 Android TV 或电视盒子</summary>
+                <p>进入「设置 → 系统」或「设备偏好设置」，打开「关于」。选中「内部版本号」或「Android TV 操作系统版本号」，连续按确认键约 7 次。返回上一级，在「开发者选项」中找「网络调试」或「无线调试」。有些机型把调试开关叫作「USB 调试」。</p>
+              </details>
+            </div>
+            <p>如果电视只有「无线调试」，先打开它。助手请你配对时，再进入「使用配对码配对设备」，把屏幕上显示的地址、端口和配对码告诉助手。配对成功后，回到无线调试主页，把主页上的连接地址和端口也告诉它。</p>
+            <p>菜单会因型号和系统版本而异。如果找不到调试入口，可以先试第 3 步的 U 盘安装。<a href="https://aerial.qust.me/#install">参考 Aerial 的分品牌操作</a></p>
+          </section>
+          <section class="route install-step" aria-labelledby="tv-ip-heading">
+            <h3 id="tv-ip-heading">2. 查看并填上电视 IP 地址</h3>
+            <p id="tv-ip-help">在电视上打开「设置 → 网络」，选中正在使用的 Wi-Fi 或有线网络，在网络详情里找「IP 地址」。部分 OPPO 电视会把它显示在详情页底部。把地址填在这里，下面的安装提示词会自动更新。</p>
+            <label for="tv-ip">电视 IP 地址</label>
+            <input id="tv-ip" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="例如 192.168.1.20" aria-describedby="tv-ip-help tv-ip-status">
+            <p id="tv-ip-status" role="status"></p>
+          </section>
+          <section id="install-methods" class="route install-step" aria-labelledby="methods-heading">
+            <h3 id="methods-heading">3. 选一种方式安装</h3>
+            <div class="install-methods" role="group" aria-labelledby="methods-heading">
+              <input type="radio" id="install-agent" name="install-method" aria-controls="agent-install-panel" checked>
+              <label for="install-agent">交给电脑端 AI 助手</label>
+              <input type="radio" id="install-usb" name="install-method" aria-controls="usb-install-panel">
+              <label for="install-usb">用 U 盘安装</label>
+              <div id="agent-install-panel" class="install-panel">
             <ol>
-              <li>把官方提供的 <strong>APK 安装包</strong>复制到 U 盘，再插到电视上。</li>
-              <li>用电视的文件管理器找到 APK，打开并按屏幕提示安装。</li>
-              <li>回到电视的应用列表，打开 <strong>PhoniPop</strong>。</li>
-            </ol>
-            <p>如果电视拦截安装，在系统提示里查看该文件管理器的安装权限。不同机型的设置入口可能不同。</p>
-          </details>
-          <details class="route" name="install-method" open>
-            <summary>交给电脑端 AI 助手</summary>
-            <ol>
-              <li>让电脑和电视连接同一局域网。按电视系统提示开启 ADB 调试，记下电视 IP。</li>
               <li>把下面的提示词发给能在电脑上运行命令的助手。助手会从官网下载并校验安装包。</li>
               <li>电视弹出允许调试或安装确认时，用遥控器确认。</li>
             </ol>
@@ -122,7 +154,17 @@ adb -s &lt;设备&gt; shell am start -W -a android.intent.action.MAIN -c android
               <p><strong>请在电脑上操作。</strong>手机上的豆包和普通网页版聊天可以讲解步骤。要让助手亲自安装，请在家里的电脑上打开上面列出的桌面工具，豆包工作版也可以，并允许它在本机运行命令。</p>
               <p>电视弹出调试授权时，确认是自己的电脑，勾选「始终允许使用这台计算机进行调试」，再按「允许」。如果电视只有「允许」按钮，直接选它。</p>
             </aside>
-          </details>
+              </div>
+              <div id="usb-install-panel" class="install-panel">
+            <ol>
+              <li>把官方提供的 <strong>APK 安装包</strong>复制到 U 盘，再插到电视上。</li>
+              <li>用电视的文件管理器找到 APK，打开并按屏幕提示安装。</li>
+              <li>回到电视的应用列表，打开 <strong>PhoniPop</strong>。</li>
+            </ol>
+            <p>如果电视拦截安装，在系统提示里查看该文件管理器的安装权限。不同机型的设置入口可能不同。</p>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </section>
