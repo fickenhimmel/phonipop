@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="用電視一起讀英文繪本。看看如何安裝拼讀泡泡、製作繪本，以及把新書加進書架。">
+  <meta name="theme-color" content="#ffdc42">
+  <title>拼讀泡泡 PhoniPop｜在電視上一起讀英文繪本</title>
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../site.js" defer></script>
+  <link rel="canonical" href="https://phonipop.space/zh-hant/">
+  <link rel="alternate" hreflang="zh-CN" href="https://phonipop.space/">
+  <link rel="alternate" hreflang="en" href="https://phonipop.space/en/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://phonipop.space/zh-hant/">
+  <link rel="alternate" hreflang="x-default" href="https://phonipop.space/">
+</head>
+<body id="top">
+  <a class="skip" href="#main">跳至主要內容</a>
+  <header class="mast">
+    <div class="shell mast-inner">
+      <a class="brand" href="#top" aria-label="拼讀泡泡首頁"><img src="../assets/phonipop.png" width="600" height="78" alt=""></a>
+      <nav class="section-nav" aria-label="主要導覽">
+        <a href="#read">閱讀方式</a>
+        <a href="#install">安裝</a>
+        <a href="#make">製作繪本</a>
+        <a href="#books">匯入繪本</a>
+      </nav>
+      <nav class="language-nav" aria-label="語言">
+        <a data-language lang="zh-CN" hreflang="zh-CN" href="../index.html">简体中文</a>
+        <a data-language lang="en" hreflang="en" href="../en/index.html">English</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="headline">
+      <div class="shell hero-grid">
+        <div class="lead-copy">
+          <h1 id="headline"><span>把英文繪本</span><span>帶上電視大螢幕</span></h1>
+          <p>拿起遙控器選書、翻頁，先聽一句，再跟著讀一句。</p>
+          <div class="actions">
+            <a class="button primary" href="#install">查看安裝方式</a>
+            <a class="button quiet" href="#read">看看怎麼讀</a>
+          </div>
+        </div>
+        <figure class="hero-shot" data-slot="bookshelf" data-kind="product">
+          <div class="screen"><img src="../assets/shelf.webp" width="1440" height="810" alt="拼讀泡泡的電視書架，藍色外框標示目前選取的繪本" fetchpriority="high"></div>
+          <figcaption>依閱讀級別或書名首字母找書。畫面也包含另外匯入的繪本。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="read" class="reading band" aria-labelledby="read-heading">
+      <div class="shell split">
+        <div class="feature-copy">
+          <h2 id="read-heading">翻一頁，<br>聽一句</h2>
+          <p>插畫和句子並排顯示在電視上。讀到一半先離開，下次打開就能接著讀。</p>
+          <dl class="key-guide">
+            <div><dt><kbd>左</kbd> <kbd>右</kbd></dt><dd>翻到上一頁或下一頁</dd></div>
+            <div><dt><kbd>確認</kbd></dt><dd>播放或暫停這一頁的朗讀</dd></div>
+            <div><dt><kbd>返回</kbd></dt><dd>回到書架</dd></div>
+          </dl>
+        </div>
+        <figure class="reading-shot" data-slot="reading" data-kind="product">
+          <img src="../assets/reader.webp" width="1280" height="720" alt="電視閱讀畫面，左邊是小雞插畫，右邊是英文句子" loading="lazy">
+          <figcaption>有附朗讀的繪本，可以一頁一頁聽著讀。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="install" class="install band" aria-labelledby="install-heading">
+      <div class="shell guide">
+        <div class="guide-intro">
+          <h2 id="install-heading">安裝到電視</h2>
+          <p>準備一台 Android TV 或 Android 電視盒。可以用 USB 隨身碟自行安裝，也可以請電腦上的 AI 助手幫忙。</p>
+          <dl class="hardware">
+            <div><dt>系統需求</dt><dd>Android 6.0 以上</dd></div>
+            <div><dt>已測試機型</dt><dd>小米電視 MiTV-AETP0（Android 9）</dd></div>
+          </dl>
+          <p><a class="button primary" href="../download/PhoniPop-2.0.1.apk" download>下載 PhoniPop 2.0.1 APK</a></p><p>內建六本 Level A 有聲繪本，皆附原版朗讀。可用 B、G、I、M、S、U 找書名。</p><figure class="tutorial-shot"><a href="../assets/launcher.webp" aria-label="放大圖片：電視首頁選取的 PhoniPop 圖示"><img src="../assets/launcher.webp" alt="電視首頁選取的 PhoniPop 圖示" loading="lazy"></a><figcaption>安裝完成後，從電視的應用程式清單開啟拼讀泡泡。</figcaption></figure>
+        </div>
+        <div class="install-choices">
+          <p class="install-shortcut">打算用 USB 隨身碟安裝？<a href="#install-methods" id="usb-install-shortcut">直接跳到第 3 步</a>。</p>
+          <section class="route install-step" aria-labelledby="adb-heading">
+            <h3 id="adb-heading">1. 開啟電視的 ADB 偵錯</h3>
+            <p>先把電腦和電視連到同一個家用網路，再用遙控器打開電視設定，依品牌找到偵錯選項。</p>
+            <div class="adb-brands">
+              <details name="adb-brand" open>
+                <summary>小米電視</summary>
+                <p>到「設定 → 關於」，選取「產品型號」，連按確認鍵直到出現開發者模式提示。回到設定，在「帳號與安全性」開啟「ADB 偵錯」。</p>
+              </details>
+              <details name="adb-brand">
+                <summary>TCL</summary>
+                <p>到「設定 → 關於 → 本機資訊」，快速按遙控器的上、下、左、右鍵。下方出現「更多」後，進去開啟「ADB」。</p>
+              </details>
+              <details name="adb-brand">
+                <summary>海爾</summary>
+                <p>按下電視機身的訊號來源鍵，選單出現後，用遙控器依序按左、左、上、右。在工廠菜單開啟「ADB 偵錯」後離開。</p>
+              </details>
+              <details name="adb-brand">
+                <summary>OPPO</summary>
+                <p>前往「設定 → 系統 → 關於本機」，選取「裝置型號」，依序按上、上、右、右，再按確認。接著到「系統 → 開發人員選項」，開啟「USB 偵錯」或「ADB 偵錯」。</p>
+              </details>
+              <details name="adb-brand">
+                <summary>其他 Android TV 或電視盒</summary>
+                <p>在「設定」開啟「系統」或「裝置偏好設定」，再進入「關於」。選取「組建編號」或「Android TV 作業系統組建」，連按確認鍵約七次。回上一層，從「開發人員選項」找「網路偵錯」「無線偵錯」或「USB 偵錯」。</p>
+              </details>
+            </div>
+            <p>電視若只有「無線偵錯」，請先開啟。助手請你配對時，選「使用配對碼配對裝置」，把畫面上的位址、連接埠及配對碼告訴它。配對後回到無線偵錯主畫面，再提供那裡顯示的連線位址及連接埠。</p>
+            <p>選單名稱會隨機型及系統版本而異。找不到偵錯選項時，可以試第 3 步的 USB 安裝方式。</p>
+          </section>
+          <section class="route install-step" aria-labelledby="tv-ip-heading">
+            <h3 id="tv-ip-heading">2. 找到並填入電視的 IP 位址</h3>
+            <p id="tv-ip-help">在電視上前往「設定 → 網路」，開啟目前使用的 Wi-Fi 或有線網路詳細資料，找到「IP 位址」。部分 OPPO 電視會把位址放在頁面底部。在這裡填入位址，下方的安裝提示詞就會自動帶入。</p>
+            <label for="tv-ip">電視 IP 位址</label>
+            <input id="tv-ip" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="例如 192.168.1.20" aria-describedby="tv-ip-help tv-ip-status">
+            <p id="tv-ip-status" role="status"></p>
+          </section>
+          <section id="install-methods" class="route install-step" aria-labelledby="methods-heading">
+            <h3 id="methods-heading">3. 選擇安裝方式</h3>
+            <div class="install-methods" role="group" aria-labelledby="methods-heading">
+              <input type="radio" id="install-agent" name="install-method" aria-controls="agent-install-panel" checked>
+              <label for="install-agent">請電腦上的 AI 助手安裝</label>
+              <input type="radio" id="install-usb" name="install-method" aria-controls="usb-install-panel">
+              <label for="install-usb">用 USB 隨身碟安裝</label>
+              <div id="agent-install-panel" class="install-panel">
+            <ol>
+              <li>複製下方的提示詞，貼給能在電腦上執行指令的助手。它會下載並驗證安裝檔。</li>
+              <li>電視跳出偵錯授權或安裝確認時，用遙控器確認。</li>
+            </ol>
+            <div class="prompt">
+              <p>請選擇能在這台電腦上執行指令的助手，例如：</p><ul class="agents"><li><img src="../assets/agents/workbuddy.svg" alt="" width="20" height="20">WorkBuddy</li><li><img src="../assets/agents/doubao.svg" alt="" width="20" height="20">豆包電腦版</li><li><img src="../assets/agents/qwen.svg" alt="" width="20" height="20">千問電腦版</li><li><img src="../assets/agents/trae.svg" alt="" width="20" height="20">Trae</li><li><img src="../assets/agents/claude-code.svg" alt="" width="20" height="20">Claude Code</li><li><img src="../assets/agents/codex.svg" alt="" width="20" height="20">Codex</li></ul><label for="agent-prompt">安裝提示詞</label>
+              <textarea id="agent-prompt" rows="12" readonly spellcheck="false">請幫我在 Android 電視上安裝拼讀泡泡（PhoniPop），並開啟書架。若已安裝，請直接更新，保留已匯入的繪本和閱讀進度。
+電視 IP：&lt;電視 IP&gt;
+
+安裝指南：https://phonipop.space/agent.md
+備用指南：https://raw.githubusercontent.com/fickenhimmel/phonipop/main/agent.md
+
+請先讀完簡體中文版安裝指南，依指示在我的電腦上執行指令，下載並驗證官方 APK，並用繁體中文回覆。如果需要我在電視上查看配對碼、允許偵錯或確認安裝，請告訴我要選哪個項目。
+
+驗收時，請把 &lt;裝置&gt; 換成 adb devices 列出的電視序號，並把 &lt;啟動元件&gt; 換成第三條查到的元件。執行後請貼上指令和原始輸出。
+
+adb -s &lt;裝置&gt; shell pm path com.phonipop.tv
+adb -s &lt;裝置&gt; shell "dumpsys package com.phonipop.tv | grep -e versionName= -e versionCode="
+adb -s &lt;裝置&gt; shell cmd package resolve-activity --brief -a android.intent.action.MAIN -c android.intent.category.LEANBACK_LAUNCHER -p com.phonipop.tv
+adb -s &lt;裝置&gt; shell am start -W -a android.intent.action.MAIN -c android.intent.category.LEANBACK_LAUNCHER -n &lt;啟動元件&gt;
+
+如果沒有裝好或無法開啟，請告訴我卡在哪一步，並貼上原始錯誤訊息。</textarea>
+              <div class="copy-row">
+                <button type="button" class="button quiet" data-copy hidden>複製提示詞</button>
+                <a href="../agent.md">查看 AI 助手安裝指南（簡體中文）</a>
+                <span id="copy-status" role="status"></span>
+              </div>
+            </div>
+            <aside class="install-tip" aria-label="安裝提醒">
+              <p><strong>請在電腦上操作。</strong>手機 App 或一般網頁聊天可以說明步驟。要請助手實際安裝，請在家中的電腦開啟上方的工具，並允許它在本機執行指令。</p>
+              <p>電視詢問是否允許偵錯時，先確認是自己的電腦。如果有「一律允許這部電腦」選項，勾選後再按「允許」。</p>
+            </aside>
+              </div>
+              <div id="usb-install-panel" class="install-panel">
+            <ol>
+              <li>將官方 <strong>APK 安裝檔</strong>複製到 USB 隨身碟，再把隨身碟插入電視。</li>
+              <li>用電視的檔案管理員找到 APK，開啟後依畫面指示安裝。</li>
+              <li>回到電視的應用程式清單，開啟 <strong>PhoniPop</strong>。</li>
+            </ol>
+            <p>電視若阻擋安裝，請依系統提示查看檔案管理員的「安裝未知應用程式」權限。各機型的設定位置可能不同。</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="make" class="band" aria-labelledby="make-heading">
+      <div class="shell guide">
+        <div class="guide-intro">
+          <h2 id="make-heading">製作自己的繪本</h2>
+          <p>把自己做的、或已獲授權使用的英文繪本交給電腦上的 AI 助手。先試做一本，完成後就能把 ZIP 匯入電視一起讀。</p>
+          <p><a href="../assets/reading-content-pack.zip" download>下載繪本製作工具包（Skill，簡體中文）</a></p><figure class="tutorial-shot"><a href="../assets/agent-books.webp" aria-label="放大圖片：電腦端助手核對四份 PDF 的頁序"><img src="../assets/agent-books.webp" alt="電腦端助手核對四份 PDF 的頁序" loading="lazy"></a><figcaption>上傳繪本後，助手會先核對頁序和版面。點選圖片可放大查看對話範例。</figcaption></figure>
+        </div>
+        <div class="route">
+          <ol>
+            <li><strong>整理素材。</strong>把一本繪本的 PDF 或 PPTX 放進同一個資料夾。如果有配套錄音，也一起放進去，並用頁碼命名。</li>
+            <li><strong>把資料夾和下方的提示詞交給電腦上的 AI 助手。</strong>助手需要能讀取本機檔案並執行 Python。已下載工具包的話，可以一併附上。</li>
+            <li><strong>試讀一次。</strong>按助手列出的頁碼，核對插畫、句子和朗讀。確認後，依照下一節的<a href="#books">匯入步驟</a>把 ZIP 加到電視。</li>
+          </ol>
+          <div class="prompt">
+            <p>請選擇能在這台電腦上執行指令的助手，例如：</p><ul class="agents"><li><img src="../assets/agents/workbuddy.svg" alt="" width="20" height="20">WorkBuddy</li><li><img src="../assets/agents/doubao.svg" alt="" width="20" height="20">豆包電腦版</li><li><img src="../assets/agents/qwen.svg" alt="" width="20" height="20">千問電腦版</li><li><img src="../assets/agents/trae.svg" alt="" width="20" height="20">Trae</li><li><img src="../assets/agents/claude-code.svg" alt="" width="20" height="20">Claude Code</li><li><img src="../assets/agents/codex.svg" alt="" width="20" height="20">Codex</li></ul>
+            <label for="make-prompt">製作繪本提示詞</label>
+            <textarea id="make-prompt" rows="5" readonly spellcheck="false">請解壓縮我附上的繪本製作工具包，依 SKILL.md 將 PDF 或 PPTX 製作成拼讀泡泡繪本。請保留原文、頁序及隨附的錄音，在本機完成驗證和打包。請用繁體中文告訴我 ZIP 存在哪裡，並列出需要我核對的頁碼，以及哪些頁面使用合成朗讀。</textarea>
+            <div class="copy-row"><button type="button" class="button quiet" data-copy hidden>複製繪本提示詞</button><span role="status"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="books" class="books band" aria-labelledby="books-heading">
+      <div class="shell">
+        <div class="book-head">
+          <h2 id="books-heading">把繪本加進書架</h2>
+          <p>第一次匯入繪本，可以先下載下方的範例。<strong>保留 ZIP 壓縮檔，直接在拼讀泡泡裡開啟。</strong></p>
+        </div>
+        <div class="book-grid">
+          <div class="import-steps">
+            <ol>
+              <li><strong>先把 ZIP 傳到電視。</strong><span>可以把繪本 ZIP 複製到 USB 隨身碟，再插入電視。若電腦上的 AI 助手已連上電視，也可以請它把 ZIP 傳到電視的 Download 資料夾，並告訴你檔名。</span></li>
+              <li><strong>在書架選「匯入繪本」（畫面顯示「导入图书」）。</strong><span>用遙控器選「U 盘 / 本地文件」。若使用 USB，就開啟隨身碟；若由助手傳送，就到電視的內部儲存空間找 Download 資料夾。第一次使用時，依畫面提示允許讀取檔案，也可以返回選「系统文件选择」。</span></li>
+              <li><strong>選取繪本 ZIP，按「添加」。</strong><span>核對清單中要新增或更新的書名，再按「添加」。如果每本都顯示「跳过」，代表書架上已有相同或較新的版本，按「完成」即可。匯入完成後就能拔掉隨身碟。</span></li>
+            </ol><figure class="tutorial-shot"><a href="../assets/import.webp" aria-label="放大圖片：電視上的匯入清單"><img src="../assets/import.webp" alt="電視匯入清單顯示這次選取的繪本" loading="lazy"></a><figcaption>選取 ZIP 後，先核對匯入清單上的書名。</figcaption></figure>
+          </div>
+          <figure class="sample">
+            <img src="../assets/sample-cover.png" width="640" height="360" alt="《三隻小豬》範例繪本封面" loading="lazy">
+            <figcaption>
+              <strong lang="en">The Three Little Pigs</strong>
+              <span>九頁原創圖文，適合用來試試匯入流程。</span>
+              <a class="button quiet" href="../assets/phonipop-sample.zip" download>下載範例繪本 ZIP</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq band" aria-labelledby="faq-heading">
+      <div class="shell guide">
+        <h2 id="faq-heading">安裝之後</h2>
+        <div class="faq-items">
+          <details><summary>匯入後還需要連網嗎？</summary><p>可以離線閱讀。匯入後，繪本會儲存在電視裡，閱讀及播放隨書朗讀都不需要連網。</p></details>
+          <details><summary>為甚麼這本繪本沒有聲音？</summary><p>朗讀音檔是隨書附上的。有些繪本只有插畫和文字，一樣可以翻頁閱讀。這裡的《三隻小豬》有逐頁朗讀，打開後按遙控器的確認鍵就能試聽。</p></details>
+          <details><summary>更新 App 後，已匯入的繪本會怎樣？</summary><p>使用同一來源的新版 APK 直接更新，就能保留已匯入的繪本和閱讀進度。原本的繪本 ZIP 也請留作備份。</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">
+    <div class="shell foot-inner">
+      <a class="brand" href="#top" aria-label="拼讀泡泡首頁"><img src="../assets/phonipop-yellow.png" width="600" height="78" alt=""></a>
+      <p>PhoniPop 2.0</p>
+      <a href="#top">回到頁首</a>
+    </div>
+  </footer>
+</body>
+</html>

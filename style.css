@@ -215,3 +215,20 @@ summary:hover { color: var(--color-blue-dark); }
 .install-panel { display: none; grid-column: 1 / -1; min-width: 0; }
 #install-agent:checked ~ #agent-install-panel,
 #install-usb:checked ~ #usb-install-panel { display: block; }
+
+.mast-inner { column-gap: var(--space-sm); }
+.mast nav { gap: clamp(0rem, 1vw, .75rem); }
+.mast nav a { white-space: nowrap; }
+.language-nav { margin-inline-start: auto; }
+.language-nav a { font-size: .9rem; }
+html[lang="en"] .lead-copy h1 { font-size: clamp(2.8rem, 4.6vw, 4.6rem); }
+
+@media (max-width: 48rem) {
+  html { scroll-padding-top: calc(88px + var(--space-md)); }
+  .mast-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0; }
+  .mast .brand { width: min(9rem, 100%); }
+  .mast .brand img { width: 100%; }
+  .language-nav { grid-column: 2; grid-row: 1; }
+  .section-nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; }
+  .mast nav a { padding-inline: .3rem; font-size: .88rem; }
+}

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read English picture books on your Android TV. Learn how to install PhoniPop, make book packs and add them to your bookshelf.">
+  <meta name="theme-color" content="#ffdc42">
+  <title>PhoniPop | English picture books on your TV</title>
+  <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../site.js" defer></script>
+  <link rel="canonical" href="https://phonipop.space/en/">
+  <link rel="alternate" hreflang="zh-CN" href="https://phonipop.space/">
+  <link rel="alternate" hreflang="en" href="https://phonipop.space/en/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://phonipop.space/zh-hant/">
+  <link rel="alternate" hreflang="x-default" href="https://phonipop.space/">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="mast">
+    <div class="shell mast-inner">
+      <a class="brand" href="#top" aria-label="PhoniPop home"><img src="../assets/phonipop.png" width="600" height="78" alt=""></a>
+      <nav class="section-nav" aria-label="Main navigation">
+        <a href="#read">Overview</a>
+        <a href="#install">Install</a>
+        <a href="#make">Make books</a>
+        <a href="#books">Add books</a>
+      </nav>
+      <nav class="language-nav" aria-label="Languages">
+        <a data-language lang="zh-CN" hreflang="zh-CN" href="../index.html">简体中文</a>
+        <a data-language lang="zh-Hant" hreflang="zh-Hant" href="../zh-hant/index.html">繁體中文</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="headline">
+      <div class="shell hero-grid">
+        <div class="lead-copy">
+          <h1 id="headline"><span>English picture books</span><span>on the big screen</span></h1>
+          <p>Pick a book with the remote, turn the page and read along at your own pace.</p>
+          <div class="actions">
+            <a class="button primary" href="#install">Set up your TV</a>
+            <a class="button quiet" href="#read">See how reading works</a>
+          </div>
+        </div>
+        <figure class="hero-shot" data-slot="bookshelf" data-kind="product">
+          <div class="screen"><img src="../assets/shelf.webp" width="1440" height="810" alt="PhoniPop bookshelf with book covers and a blue selection outline" fetchpriority="high"></div>
+          <figcaption>Browse by reading level or the first letter of a title. This bookshelf includes books added separately.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="read" class="reading band" aria-labelledby="read-heading">
+      <div class="shell split">
+        <div class="feature-copy">
+          <h2 id="read-heading">Turn the page.<br>Read along.</h2>
+          <p>The picture and the sentence appear together on the big screen. Come back anytime and pick up where you left off.</p>
+          <dl class="key-guide">
+            <div><dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Go to the previous or next page</dd></div>
+            <div><dt><kbd>OK</kbd></dt><dd>Play or pause the narration for this page</dd></div>
+            <div><dt><kbd>Back</kbd></dt><dd>Return to the bookshelf</dd></div>
+          </dl>
+        </div>
+        <figure class="reading-shot" data-slot="reading" data-kind="product">
+          <img src="../assets/reader.webp" width="1280" height="720" alt="TV reading screen with a chick illustration and its matching English sentence" loading="lazy">
+          <figcaption>Listen page by page in books that come with narration.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="install" class="install band" aria-labelledby="install-heading">
+      <div class="shell guide">
+        <div class="guide-intro">
+          <h2 id="install-heading">Install on your TV</h2>
+          <p>You’ll need an Android TV or an Android TV box. Install from a USB drive, or have an AI assistant on your computer handle setup.</p>
+          <dl class="hardware">
+            <div><dt>Requirements</dt><dd>Android 6.0 or later</dd></div>
+            <div><dt>Tested device</dt><dd>Xiaomi MiTV-AETP0 running Android 9</dd></div>
+          </dl>
+          <p><a class="button primary" href="../download/PhoniPop-2.0.1.apk" download>Download PhoniPop 2.0.1 (APK)</a></p><p>Includes six Level A picture books with original narration. To find one by title, try B, G, I, M, S or U.</p><figure class="tutorial-shot"><a href="../assets/launcher.webp" aria-label="Enlarge the PhoniPop icon on the TV home screen"><img src="../assets/launcher.webp" alt="PhoniPop selected on the TV home screen" loading="lazy"></a><figcaption>Once installed, open PhoniPop from your TV’s apps list.</figcaption></figure>
+        </div>
+        <div class="install-choices">
+          <p class="install-shortcut">Installing from USB? <a href="#install-methods" id="usb-install-shortcut">Skip to step 3</a>.</p>
+          <section class="route install-step" aria-labelledby="adb-heading">
+            <h3 id="adb-heading">1. Turn on ADB debugging</h3>
+            <p>Connect your computer and TV to the same home network. Open Settings on the TV and follow the steps for your brand.</p>
+            <div class="adb-brands">
+              <details name="adb-brand" open>
+                <summary>Xiaomi TV</summary>
+                <p>Go to Settings → About. Select Product model and press OK repeatedly until developer mode turns on. Go back to Settings → Accounts &amp; Security and enable ADB debugging.</p>
+              </details>
+              <details name="adb-brand">
+                <summary>TCL</summary>
+                <p>Go to Settings → About → Device information. Quickly press Up, Down, Left, then Right on the remote. Open the More menu that appears at the bottom and turn on ADB.</p>
+              </details>
+              <details name="adb-brand">
+                <summary>Haier</summary>
+                <p>Press the Input button on the TV itself. When the menu appears, press Left, Left, Up, then Right on the remote. In the factory menu, turn on ADB debugging and exit.</p>
+              </details>
+              <details name="adb-brand">
+                <summary>OPPO</summary>
+                <p>Go to Settings → System → About. Select Device model, press Up, Up, Right, Right, then OK. Under System → Developer options, enable USB debugging or ADB debugging.</p>
+              </details>
+              <details name="adb-brand">
+                <summary>Other Android TV devices</summary>
+                <p>In Settings, open System or Device Preferences, then About. Highlight Build or Android TV OS build and press OK about seven times. Go back to Developer options and look for Network debugging, Wireless debugging or USB debugging.</p>
+              </details>
+            </div>
+            <p>If your TV offers Wireless debugging, turn it on. When your assistant asks you to pair, select Pair device with pairing code and share the address, port and code on the TV. After pairing, return to the Wireless debugging screen and give the assistant the connection address and port shown there.</p>
+            <p>Menu names vary by model and software version. If you can’t find debugging, try the USB method in step 3.</p>
+          </section>
+          <section class="route install-step" aria-labelledby="tv-ip-heading">
+            <h3 id="tv-ip-heading">2. Enter your TV’s IP address</h3>
+            <p id="tv-ip-help">On the TV, go to Settings → Network and open the details for your active Wi-Fi or Ethernet connection. Look for the IP address. On some OPPO models it’s at the bottom of that screen. Enter it below to add it to your installation prompt.</p>
+            <label for="tv-ip">TV IP address</label>
+            <input id="tv-ip" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="e.g. 192.168.1.20" aria-describedby="tv-ip-help tv-ip-status">
+            <p id="tv-ip-status" role="status"></p>
+          </section>
+          <section id="install-methods" class="route install-step" aria-labelledby="methods-heading">
+            <h3 id="methods-heading">3. Choose how to install</h3>
+            <div class="install-methods" role="group" aria-labelledby="methods-heading">
+              <input type="radio" id="install-agent" name="install-method" aria-controls="agent-install-panel" checked>
+              <label for="install-agent">Use a desktop AI assistant</label>
+              <input type="radio" id="install-usb" name="install-method" aria-controls="usb-install-panel">
+              <label for="install-usb">Install from USB</label>
+              <div id="agent-install-panel" class="install-panel">
+            <ol>
+              <li>Copy the prompt below into an assistant that can run commands on your computer. It will download and verify the installer.</li>
+              <li>Use your remote to approve any debugging or installation prompts on the TV.</li>
+            </ol>
+            <div class="prompt">
+              <p>Use an assistant that can run commands on this computer.</p><ul class="agents"><li><img src="../assets/agents/workbuddy.svg" alt="" width="20" height="20">WorkBuddy</li><li><img src="../assets/agents/doubao.svg" alt="" width="20" height="20">Doubao for desktop</li><li><img src="../assets/agents/qwen.svg" alt="" width="20" height="20">Qwen for desktop</li><li><img src="../assets/agents/trae.svg" alt="" width="20" height="20">Trae</li><li><img src="../assets/agents/claude-code.svg" alt="" width="20" height="20">Claude Code</li><li><img src="../assets/agents/codex.svg" alt="" width="20" height="20">Codex</li></ul><label for="agent-prompt">Installation prompt</label>
+              <textarea id="agent-prompt" rows="12" readonly spellcheck="false">Install or update PhoniPop on my Android TV, then open the bookshelf. If it’s already installed, update it in place so my imported books and reading progress stay on the TV.
+TV IP address: &lt;TV IP&gt;
+
+Setup guide: https://phonipop.space/agent.md
+Backup: https://raw.githubusercontent.com/fickenhimmel/phonipop/main/agent.md
+
+Read the full guide first. Follow its instructions in Simplified Chinese and respond to me in English. Run the commands on my computer, download the official APK, and verify it before installing. If I need to find a pairing code, allow debugging or confirm an install, tell me what to select on the TV.
+
+For the final checks, substitute the TV’s serial from adb devices for &lt;device&gt; and the component returned by the third command for &lt;activity&gt;. Report the commands and their exact output.
+
+adb -s &lt;device&gt; shell pm path com.phonipop.tv
+adb -s &lt;device&gt; shell "dumpsys package com.phonipop.tv | grep -e versionName= -e versionCode="
+adb -s &lt;device&gt; shell cmd package resolve-activity --brief -a android.intent.action.MAIN -c android.intent.category.LEANBACK_LAUNCHER -p com.phonipop.tv
+adb -s &lt;device&gt; shell am start -W -a android.intent.action.MAIN -c android.intent.category.LEANBACK_LAUNCHER -n &lt;activity&gt;
+
+If anything fails, tell me which step failed and include the original error.</textarea>
+              <div class="copy-row">
+                <button type="button" class="button quiet" data-copy hidden>Copy prompt</button>
+                <a href="../agent.md">Agent setup guide (Simplified Chinese)</a>
+                <span id="copy-status" role="status"></span>
+              </div>
+            </div>
+            <aside class="install-tip" aria-label="Before you install">
+              <p><strong>Use a desktop assistant.</strong>A mobile or browser chat can walk you through the steps. For hands-on setup, open one of the desktop tools above and allow it to run commands on your computer.</p>
+              <p>When the TV asks to allow debugging, check that the request is from your computer. Select Always allow from this computer if available, then choose Allow.</p>
+            </aside>
+              </div>
+              <div id="usb-install-panel" class="install-panel">
+            <ol>
+              <li>Copy the official <strong>APK file</strong> to a USB drive and plug the drive into your TV.</li>
+              <li>Find the APK in your TV’s file manager, open it and follow the on-screen steps.</li>
+              <li>Go to the TV’s apps list and open <strong>PhoniPop</strong>.</li>
+            </ol>
+            <p>If your TV blocks the install, follow its prompt to allow your file manager to install apps from this source. The setting varies by model.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="make" class="band" aria-labelledby="make-heading">
+      <div class="shell guide">
+        <div class="guide-intro">
+          <h2 id="make-heading">Make your own picture book</h2>
+          <p>Give a desktop AI assistant an English picture book you created or have permission to use. Start with one book and turn it into a ZIP you can read on the TV.</p>
+          <p><a href="../assets/reading-content-pack.zip" download>Download the book-making toolkit (Skill, Simplified Chinese)</a></p><figure class="tutorial-shot"><a href="../assets/agent-books.webp" aria-label="Enlarge the example of a desktop assistant checking PDF page order"><img src="../assets/agent-books.webp" alt="Desktop assistant checking the page order of four PDFs" loading="lazy"></a><figcaption>Example workflow: the assistant checks page order and layout after you attach a book. Select the image to enlarge it.</figcaption></figure>
+        </div>
+        <div class="route">
+          <ol>
+            <li><strong>Gather your files.</strong>Put the book’s PDF or PowerPoint file in its own folder. If you have recordings, add them to that folder and name them by page number.</li>
+            <li><strong>Give your assistant the folder and the prompt below.</strong>The assistant needs access to local files and the ability to run Python. You can attach the toolkit ZIP if you’ve already downloaded it.</li>
+            <li><strong>Review your book.</strong>Check the pictures, text and narration on the pages your assistant flags. Then follow the <a href="#books">import steps</a> to add the ZIP to your TV.</li>
+          </ol>
+          <div class="prompt">
+            <p>Use an assistant that can run commands on this computer.</p><ul class="agents"><li><img src="../assets/agents/workbuddy.svg" alt="" width="20" height="20">WorkBuddy</li><li><img src="../assets/agents/doubao.svg" alt="" width="20" height="20">Doubao for desktop</li><li><img src="../assets/agents/qwen.svg" alt="" width="20" height="20">Qwen for desktop</li><li><img src="../assets/agents/trae.svg" alt="" width="20" height="20">Trae</li><li><img src="../assets/agents/claude-code.svg" alt="" width="20" height="20">Claude Code</li><li><img src="../assets/agents/codex.svg" alt="" width="20" height="20">Codex</li></ul>
+            <label for="make-prompt">Book-making prompt</label>
+            <textarea id="make-prompt" rows="5" readonly spellcheck="false">Extract the toolkit I’ve attached and follow its SKILL.md. Turn my PDF or PowerPoint into a PhoniPop picture book. Preserve the original text, page order and any recordings I supplied. Validate and package the book on this computer. Tell me in English where to find the ZIP, which pages I should review and which pages use generated narration.</textarea>
+            <div class="copy-row"><button type="button" class="button quiet" data-copy hidden>Copy book-making prompt</button><span role="status"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="books" class="books band" aria-labelledby="books-heading">
+      <div class="shell">
+        <div class="book-head">
+          <h2 id="books-heading">Add books to your bookshelf</h2>
+          <p>Try it with the sample book below. <strong>Keep the book as a ZIP file and open it in PhoniPop.</strong></p>
+        </div>
+        <div class="book-grid">
+          <div class="import-steps">
+            <ol>
+              <li><strong>Get the ZIP onto your TV.</strong><span>Copy the ZIP to a USB drive and plug it into the TV. If your desktop assistant is already connected to the TV, you can also ask it to transfer the ZIP to the TV’s Download folder and tell you the filename.</span></li>
+              <li><strong>Choose Import books (导入图书) from the bookshelf.</strong><span>Choose USB / local files (U 盘 / 本地文件) with the remote. Browse your USB drive or open Download in the TV’s internal storage. If asked, allow file access. You can also go back and use the system file picker (系统文件选择).</span></li>
+              <li><strong>Select the ZIP and choose Add (添加).</strong><span>Check the list of books to add or update, then confirm. If every book is marked Skip (跳过), the TV already has the same or a newer edition. Choose Done (完成). Once the import finishes, you can unplug the USB drive.</span></li>
+            </ol><figure class="tutorial-shot"><a href="../assets/import.webp" aria-label="Enlarge the TV’s import preview"><img src="../assets/import.webp" alt="TV import preview listing the selected books" loading="lazy"></a><figcaption>After selecting the ZIP, review the list of books before you confirm.</figcaption></figure>
+          </div>
+          <figure class="sample">
+            <img src="../assets/sample-cover.png" width="640" height="360" alt="Cover of the Three Little Pigs sample book" loading="lazy">
+            <figcaption>
+              <strong lang="en">The Three Little Pigs</strong>
+              <span>A nine-page illustrated story to try your first import.</span>
+              <a class="button quiet" href="../assets/phonipop-sample.zip" download>Download the sample book (ZIP)</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq band" aria-labelledby="faq-heading">
+      <div class="shell guide">
+        <h2 id="faq-heading">After setup</h2>
+        <div class="faq-items">
+          <details><summary>Can we read offline?</summary><p>Yes. Imported books are stored on your TV, so you can read and play included narration offline.</p></details>
+          <details><summary>Why doesn’t my book have sound?</summary><p>Narration comes with the book pack. Some packs contain just pictures and text. The Three Little Pigs sample includes narration. Press OK on the remote to listen.</p></details>
+          <details><summary>What happens to my books when I update?</summary><p>Install the new APK from the same source over your current app to keep your books and reading progress. Keep your original ZIP files as a backup.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">
+    <div class="shell foot-inner">
+      <a class="brand" href="#top" aria-label="PhoniPop home"><img src="../assets/phonipop-yellow.png" width="600" height="78" alt=""></a>
+      <p>PhoniPop 2.0</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
