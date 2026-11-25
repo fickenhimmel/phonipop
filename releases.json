@@ -3,11 +3,11 @@
   "status": "available",
   "packageName": "com.phonipop.tv",
   "release": {
-    "versionName": "2.0.0",
-    "versionCode": 20006,
+    "versionName": "2.0.1",
+    "versionCode": 20007,
     "minSdk": 23,
-    "apkUrl": "https://phonipop.space/download/PhoniPop-2.0.0.apk",
-    "sha256": "447eaea773b80803e48df5e8ec32cf71afe398cdaa416743c67594f3d8321daa",
-    "fallbackApkUrl": "https://github.com/fickenhimmel/phonipop/releases/download/v2.0.0/PhoniPop-2.0.0.apk"
+    "apkUrl": "https://phonipop.space/download/PhoniPop-2.0.1.apk",
+    "sha256": "2628cf275891cead6a99bb119afe0eaaefc730d0cdb202b889f243d6eecdc761",
+    "fallbackApkUrl": "https://raw.githubusercontent.com/fickenhimmel/phonipop/main/download/PhoniPop-2.0.1.apk"
   }
 }

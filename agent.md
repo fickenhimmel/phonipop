@@ -26,7 +26,7 @@ curl.exe --fail --location --proto "=https" --proto-redir "=https" --output Phon
 Get-FileHash -Algorithm SHA256 -LiteralPath .\PhoniPop.apk
 ```
 
-主地址不可用时，尝试清单中的 fallbackApkUrl。若某个来源返回旧文件或 HTML 导致摘要不符，记录该地址和实际摘要，丢弃本次临时下载的文件。2.0.0 还可使用[官网 Git 仓库中的 APK](https://raw.githubusercontent.com/fickenhimmel/phonipop/main/download/PhoniPop-2.0.0.apk)重试。每次都与同一清单的 sha256 比对；没有任何副本匹配就停止。始终启用 HTTPS 证书校验。
+主地址不可用时，尝试清单中的 fallbackApkUrl。若某个来源返回旧文件或 HTML 导致摘要不符，记录该地址和实际摘要，丢弃本次临时下载的文件。每次都与同一清单的 sha256 比对；没有任何副本匹配就停止。始终启用 HTTPS 证书校验。
 
 ```text
 aapt dump badging "<APK 本地路径>"
@@ -64,7 +64,7 @@ adb -s <目标序列号> shell dumpsys package com.phonipop.tv
 
 确认设备 API 达到已校验 APK 的 minSdk。若查询报连接或权限错误，先解决错误。只有设备正常响应且包管理器确认未安装，才按首次安装处理。
 
-- 首次安装或目标 versionCode 更高时，运行下面的覆盖安装命令。按整数 versionCode 比较；两个构建可能都显示 2.0.0。
+- 首次安装或目标 versionCode 更高时，运行下面的覆盖安装命令。按整数 versionCode 比较；同一个显示版本可能对应不同构建。
 - versionCode 相同时可跳过重装。先用 pm path 返回的 base.apk 路径（去掉 package: 前缀），通过 `adb -s <目标序列号> pull "<电视上的 base.apk 路径>" "<本机临时文件>"` 取回已装包，按第 2 节核对实际签名；对当前单 APK 正式版也核对文件摘要。若无法读取，说明无法确认已装副本；可对同版本使用已校验的官方 APK 执行覆盖安装，由 Android 校验签名兼容性。
 - 已装 versionCode 更高时保留该版本，并报告已装和清单中的两个版本号。若要启动并验收已有新版，先按上一步读取已装包、核对正式签名并读取其电视启动组件。新版的文件摘要应以对应版本的发布信息为准。
 
@@ -86,7 +86,7 @@ adb -s <目标序列号> shell am start -W -a android.intent.action.MAIN -c andr
 ```
 
 1. 第一条应返回 package: 路径，第二条的实际版本应符合第 4 节的判断。电视缺少 grep 时运行完整 dumpsys package 命令，从包信息中原样摘录两个版本字段。
-2. 第三条须返回 com.phonipop.tv 的组件，替换到第四条。旧系统缺少 resolve-activity 时，保留错误，按已校验 APK 的包名和 leanback-launchable-activity 拼成组件；2.0.0 是 com.phonipop.tv/com.reading.tv.MainActivity。走此替代路径时，注明电视应用列表入口尚未通过系统查询确认。系统支持查询但没有匹配项时，报告入口异常。
+2. 第三条须返回 com.phonipop.tv 的组件，替换到第四条。旧系统缺少 resolve-activity 时，保留错误，按已校验 APK 的包名和 leanback-launchable-activity 拼成组件；当前正式版使用 com.phonipop.tv/com.reading.tv.MainActivity。走此替代路径时，注明电视应用列表入口尚未通过系统查询确认。系统支持查询但没有匹配项时，报告入口异常。
 3. 第四条须无 Error 或超时，检查 Status 和实际 Activity。若提示已有任务被带到前台，或家长看到闪退、黑屏，运行 `adb -s <目标序列号> shell dumpsys activity activities`，查看当前 resumed Activity 所属包；无法确认时请家长描述屏幕。声称已看到书架需要实际画面或家长确认。
 4. 若任一步失败，报告设备型号、失败步骤和原始错误，指出已验证到哪一步。覆盖安装成功只能证明安装器完成了更新；书库和阅读进度是否保留，需要打开已有书目核实。
 
